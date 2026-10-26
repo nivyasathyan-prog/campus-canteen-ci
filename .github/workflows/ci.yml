@@ -1,0 +1,22 @@
+name: Campus Canteen CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    name: Run Python Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set Up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run Unit Tests
+        run: python -m unittest -v
