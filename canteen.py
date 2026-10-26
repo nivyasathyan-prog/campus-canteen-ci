@@ -18,7 +18,7 @@ def calculate_total(subtotal):
 
     discounted_amount = subtotal - discount
 
-    gst = discounted_amount * 0.10
+    gst = discounted_amount * 0.05
 
     final_amount = discounted_amount + gst
 
